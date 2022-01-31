@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="teste2.css">
+</head>
+<header class="header" role="banner">
+  
+  
+    <button class="burger-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
+  </header>
+  
+    
+
+
+
+  <nav role="navigation" class="navigation" tabindex="0">
+ 
+        
+        
+     <a class="navigation__link" href="index.html">  Fesches-Le-Châtel </a>
+     <a class="navigation__link" href="actualites.html">  Actualités </a>
+     <a class="navigation__link" href="histoire.html">  Histoire de la commune </a>
+     <a class="navigation__link" href="horaire.html">   Horaires et contacts </a>
+     <a class="navigation__link" href="elus.html">   Les élus /Le personnel communal </a>
+     <a class="navigation__link" href="services.html">  Services à la population </a>
+     <a class="navigation__link" href="associations.html">  Les associations </a>
+     <a class="navigation__link" href="environnement.html">  Environnement </a>
+     <a class="navigation__link" href="urbanisme.html"> Urbanisme </a>
+
+       
+    </nav>
+    <main class="main" role="main">
+    <script>
+        (function() {
+            function toggleNav() {
+            // Define targets
+            var target = document.querySelector('.main');
+            var button = document.querySelector('.burger-button');
+            var navigation = document.querySelector('.navigation');
+            
+            // click-touch event
+            if ( button ) {
+              button.addEventListener('click', 
+              function (e) { 
+                navigation.classList.toggle('is-opened'); 
+                navigation.focus();
+                e.preventDefault();
+              }, false );
+            }
+            } // end toggleNav()
+            
+            toggleNav();
+            }());
+        </script>
+
+
+    
+
+    <p class="text">
+        Edito :
+         <br>
+         <br>
+        PETITES VILLES DE DEMAIN
+        FESCHES-LE-CHÂTEL
+        <br>
+        <br>
+        Ce programme soutient les dynamiques de transition, afin d'améliorer les conditions de vie des territoires de 20&nbsp;000 habitants.
+         
+        Fesches-le-Châtel va pouvoir concrétiser certains projets en cours. Ceux-ci ont été ciblés comme le développement et l'amélioration de l'accès aux équipements et services publics, le confortement du développement économique, la valorisation du cadre de vie et du patrimoine local pour l'amélioration de l'offre d'habitats afin de favoriser le bien vieillir.
+         
+        C'est l'Agence Nationale de la Cohésion des Territoires (ANCT) qui pilote la mise en oeuvre du programme "Petites villes de demain" au plus près du terrain et des habitants par l'intermédiaire de ses délégués territoriaux et des Préfets.
+         
+        L'Agence de Développement et d'Urbanisme (ADU) du Pays de Montbéliard réalise actuellement, en concertation avec les élus, une étude stratégique pour l'élaboration et la formalisation du diagnostic, du projet de territoire et du plan d'actions.
+         
+        Des actions matures sont déjà identifiées comme :
+         
+        Travaux de réfection de la toiture de l'usine Bedeville (en cours)
+        Création d'un marché couvert sur la friche industrielle de l'espace du Magny
+        Requalification et sécurisation des jeux du square
+        Création de jardins partagés
+        Mise en place d'un espace "France Services"
+        
+        </p>
+            
+</main>
+</html>

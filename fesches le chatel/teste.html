@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+
+    <header class="header" role="banner">
+  
+  
+  <button class="burger-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
+</header>
+
+<nav role="navigation" class="navigation" tabindex="0">
+    <a class="navigation__link" href="index.html">  Fesches-Le-Châtel </a>
+    <a class="navigation__link" href="actualites.html">  Actualités </a>
+    <a class="navigation__link" href="histoire.html">  Histoire de la commune </a>
+    <a class="navigation__link" href="horaire.html">   Horaires et contacts </a>
+    <a class="navigation__link" href="elus.html">   Les élus /Le personnel communal </a>
+    <a class="navigation__link" href="services.html">  Services à la population </a>
+    <a class="navigation__link" href="associations.html">  Les associations </a>
+    <a class="navigation__link" href="environnement.html">  Environnement </a>
+    <a class="navigation__link" href="urbanisme.html"> Urbanisme </a>
+</nav>
+
+
+
+<main class="main" role="main">
+  
+  <h1>Navigation "push top JS"</h1>
+  <p>Navigation "Push Top" : au clic/tap sur le bouton burger, la partie principale se décale vers le bas, laissant découvrir la navigation.</p>
+  <ul>
+    <li>JavaScript pour le comportement "touch"</li>
+    <li>CSS pour les styles et les transitions</li>
+  </ul>
+  <p>Le principe général est celui-ci :</p>
+  <ul>
+    <li>"main" s'affiche par dessus "navigation". Ce dernier étant en position absolute et z-index inférieur.</li> 
+    <li>JavaScript s'occupe de l'action "touch" en ajoutant/retirant la classe ".is-opened" sur "main".</li>
+  </ul>
+  <p>Accessibilité :</p>
+  <ul>
+    <li>La navigation au clavier est possible (la méthode focus() donne le focus à la navigation après avoir actionné le bouton burger)</li>
+    <li>Le bouton burger est entouré (outline) lors de la navigation clavier uniquement (pas au clic), grâce à :focus-visible</li>
+  </ul>
+  <p>Grid Layout est ici employé pour :</p>
+  <ul>
+    <li>Le bouton burger (grille de 3 rangées, avec pseudo-éléments ::before et ::after)</li>
+    <li>La navigation (espacements internes grâce à gap)</li>
+  </ul>
+</main>
+<script>
+(function() {
+    function toggleNav() {
+    // Define targets
+    var target = document.querySelector('.main');
+    var button = document.querySelector('.burger-button');
+    var navigation = document.querySelector('.navigation');
+    
+    // click-touch event
+    if ( button ) {
+      button.addEventListener('click', 
+      function (e) { 
+        navigation.classList.toggle('is-opened'); 
+        navigation.focus();
+        e.preventDefault();
+      }, false );
+    }
+    } // end toggleNav()
+    
+    toggleNav();
+    }());
+</script>
+
+</html>
+
+  

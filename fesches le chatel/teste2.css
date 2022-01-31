@@ -1,0 +1,102 @@
+
+/*--carousel--*/
+
+.carousel {
+  --current-slide: 0;
+  /* we set position relative so absolute position works properly for the buttons */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.carousel-button {
+  /* vertically centering the buttons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  /* basic styling */
+  
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color:transparent;
+  border: none;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: color 0.1s;
+}
+
+button img {
+  width: 10%;
+}
+
+.carousel-button:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button_next {
+  /* The "next slide button" will be at the right */
+  right: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+  text-align: center;
+  
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-button {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}
+
+.flc {
+  width: 30%;
+  margin-top: 90PX;
+}
+
+
+.mairie {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.maison {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.parc {
+    width: 30%;
+    margin-top: 80px;
+}
+
+.lavoir {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.eglise{
+    width: 30%;
+    margin-top: 50px;
+}
+
+
+
+.text-carousel {
+    font-size: 25px;
+    font-family: - 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blue;
+}
+
